@@ -1,0 +1,26 @@
+/*  */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input-label {
+    @apply text-cyan-900 text-sm font-bold
+  }
+  
+  .input-field {
+    @apply w-full px-2 py-1 ml-2 text-right text-lg text-cyan-900 font-bold bg-white bg-opacity-0 outline-none
+  }
+  
+  .btn {
+    @apply w-full px-10 py-2 bg-cyan-900 hover:bg-cyan-300 text-white hover:text-cyan-900 text-xl text-center font-bold rounded-md hover:cursor-pointer
+  }
+}
+
+/* remove arrows from input field using custom utilities */
+@layer {
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+  }
+}
